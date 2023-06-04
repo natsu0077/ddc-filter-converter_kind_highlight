@@ -15,13 +15,16 @@ export class Filter extends BaseFilter<Params> {
   }): Promise<Item[]> {
     for (const item of args.items) {
       if (item.kind) {
-        item.highlights = [{
+        if (!item.highlights) {
+          item.highlights = [];
+        }
+        item.highlights.push({
           name: "ddc-filter-converter_kind_highlight",
           type: "kind",
           hl_group: args.filterParams.kindHighlights[item.kind] ?? "",
           col: 0,
           width: item.kind.length,
-        }]
+        });
       }
     }
     return Promise.resolve(args.items);
