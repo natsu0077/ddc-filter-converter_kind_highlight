@@ -4,7 +4,7 @@ import {
 } from "https://deno.land/x/ddc_vim@v3.5.0/types.ts";
 
 type Params = {
-  kindHighlights: Record<string, string>;
+  highlights: Record<string, string>;
 };
 
 export class Filter extends BaseFilter<Params> {
@@ -21,7 +21,7 @@ export class Filter extends BaseFilter<Params> {
         item.highlights.push({
           name: "ddc-filter-converter_kind_highlight",
           type: "kind",
-          hl_group: args.filterParams.kindHighlights[item.kind] ?? "",
+          hl_group: args.filterParams.highlights[item.kind] ?? "",
           col: 0,
           width: item.kind.length,
         });
@@ -32,7 +32,7 @@ export class Filter extends BaseFilter<Params> {
 
   override params(): Params {
     return {
-      kindHighlights: {}
+      highlights: {}
     };
   }
 }
