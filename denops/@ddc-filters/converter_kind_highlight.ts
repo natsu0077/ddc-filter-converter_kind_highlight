@@ -22,7 +22,7 @@ export class Filter extends BaseFilter<Params> {
           name: "ddc-filter-converter_kind_highlight",
           type: "kind",
           hl_group: args.filterParams.highlights[item.kind] ?? "",
-          col: 0,
+          col: 1,
           width: item.kind.length,
         });
       }
