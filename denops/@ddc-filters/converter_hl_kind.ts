@@ -18,7 +18,7 @@ export class Filter extends BaseFilter<Params> {
         item.highlights = [
           ...(item.highlights ?? []),
           {
-            name: "ddc-filter-converter_kind_highlight",
+            name: "ddc-filter-converter_hl_kind",
             type: "kind",
             hl_group: args.filterParams.highlights[item.kind] ?? "",
             col: 1,

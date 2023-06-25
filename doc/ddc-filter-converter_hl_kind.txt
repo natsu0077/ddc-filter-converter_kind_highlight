@@ -1,21 +1,21 @@
-*ddc-filter-converter_kind_highlight.txt*	Kind highlighter for ddc.vim
+*ddc-filter-converter_hl_kind.txt*	Kind highlighter for ddc.vim
 
 ==============================================================================
-CONTENTS		*ddc-filter-converter_kind_highlight-contents*
+CONTENTS		*ddc-filter-converter_hl_kind-contents*
 
-Introduction		|ddc-filter-converter_kind_highlight-introduction|
-Examples		|ddc-filter-converter_kind_highlight-examples|
-Params			|ddc-filter-converter_kind_highlight-params|
+Introduction		|ddc-filter-converter_hl_kind-introduction|
+Examples		|ddc-filter-converter_hl_kind-examples|
+Params			|ddc-filter-converter_hl_kind-params|
 
 
 ==============================================================================
-INTRODUCTION		*ddc-filter-converter_kind_highlight-introduction*
+INTRODUCTION		*ddc-filter-converter_hl_kind-introduction*
 
 This converter highlights the specified kind with the specified highlight group.
 
 
 ==============================================================================
-EXAMPLES		*ddc-filter-converter_kind_highlight-examples*
+EXAMPLES		*ddc-filter-converter_hl_kind-examples*
 
 If you using ddc-source-nvim-lsp and you want to highlight like nvim-cmp.
 >
@@ -23,11 +23,11 @@ If you using ddc-source-nvim-lsp and you want to highlight like nvim-cmp.
     \  sources: ['nvim-lsp'],
     \  sourceOptions: #{
     \    nvim-lsp: #{
-    \      converters: ['converter_kind_highlight'],
+    \      converters: ['converter_hl_kind'],
     \    }
     \  },
     \  filterParams: #{
-    \    converter_kind_highlight: #{
+    \    converter_hl_kind: #{
     \      highlights: #{
     \        Text: 'CmpItemKindText',
     \        Method: 'CmpItemKindMethod',
@@ -62,9 +62,9 @@ If you using ddc-source-nvim-lsp and you want to highlight like nvim-cmp.
 
 
 ==============================================================================
-PARAMS			*ddc-filter-converter_kind_highlight-params*
+PARAMS			*ddc-filter-converter_hl_kind-params*
 
-			*ddc-filter-converter_kind_highlight-param-highlights*
+			*ddc-filter-converter_hl_kind-param-highlights*
 highlights	(Record<string, string>)
 		Customized highlights groups for kind.
 
